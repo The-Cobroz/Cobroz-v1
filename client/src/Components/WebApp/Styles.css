@@ -1,0 +1,88 @@
+/* APPNAVBAR CSS */
+
+.appNavbar{
+    background-color: #1B2430;
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+}
+
+.home img{
+    cursor: pointer;
+    height: 40%;
+    width: 80%;
+    padding-top: 5%;
+}
+
+.middle{
+    margin-top: 25%;
+    text-align: left;
+    margin-left:20%;
+}
+
+.item{
+    width: 100%;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.lower{
+    margin-top: 30%;
+}
+
+.pointed{
+    cursor: pointer;
+}
+
+.lower a{
+    background-color: #1B2430;
+}
+
+/* CLIENT AREA CSS */
+
+.client-area{
+    text-align: left;
+    height: 50%;
+    width: 50%;
+    background-color: #efefef;
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 2%;
+}
+
+.settings-area{
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.settings-tab{
+    background-color: #D8D9DA;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.settings-option{
+    padding: 2%;
+    cursor: pointer;
+    font-weight:normal;
+}
+
+.delete{
+    color: red;
+}
+
+.settings{
+    text-align: left;
+    padding: 5%;
+}
+
+.settings, textarea{
+    resize: none;
+    border-radius: 10px;
+}
