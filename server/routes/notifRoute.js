@@ -243,6 +243,10 @@ router.get("/getAllNotifs", async(req, res) => {
     }
 });
 
+router.post("/systemNotif", async(req, res) => {
+    
+});
+
 router.get("/getNotifs", async(req, res)=> {
     const id = jwt.decode(req.cookies.logged, "cugelaiUzcldiufgaewiufgsldjc");
     
