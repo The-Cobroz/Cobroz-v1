@@ -13,10 +13,10 @@ const FollowRequestNotif = () => {
           <img src={profile}/>
         </div>
         <div className='col-sm-10 notif-text'>
-          <h6>Name has sent you a bro request</h6>
+          <h6>Name Surname wants to bro you. Add them to your list.</h6>
         </div>
         <div className='col-sm-1'>
-          <button className='btn btn-light'>Accept</button>
+          <button className='btn btn-light'>Accept </button>
         </div>
     </div>
   )

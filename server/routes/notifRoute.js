@@ -244,7 +244,31 @@ router.get("/getAllNotifs", async(req, res) => {
 });
 
 router.post("/systemNotif", async(req, res) => {
-    
+    const data = req.body;
+
+    try{
+        const notifData = {
+            type: "welcome",
+            to: data.to,
+            toType: data.type
+        };
+
+        const notif = await notifModel.create(notifData);
+
+        if(notif){
+            res.status(200).json({
+                message: "notif added"
+            });
+        }
+        else{
+            res.status(205).json({
+                message: "some error"
+            });
+        }
+    }
+    catch(error){
+        res.status(500).json(error);
+    }
 });
 
 router.get("/getNotifs", async(req, res)=> {
