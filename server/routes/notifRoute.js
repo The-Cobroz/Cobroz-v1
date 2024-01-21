@@ -248,9 +248,9 @@ router.post("/systemNotif", async(req, res) => {
 
     try{
         const notifData = {
-            type: "welcome",
+            type: data.type,
             to: data.to,
-            toType: data.type
+            toType: data.toType
         };
 
         const notif = await notifModel.create(notifData);

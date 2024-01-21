@@ -203,7 +203,7 @@ router.put("/editComment", async(req,res) => {
 });
 
 router.get("/getComment", async(req, res) => {
-    const {commentID} = req.body;
+    const {commentID} = req.query;
     try{
         const comment = await commentModel.findOne({_id: commentID});
         if(comment){

@@ -68,6 +68,33 @@ router.get("/getUser", async(req,res) => {
     }
 });
 
+router.get("/getUserDetails", async(req, res) => {
+    const id = req.query.from;
+    const type = req.query.fromType;
+
+    try{
+        let userData = null;
+        if(type === "lawyer"){
+            userData = await lspModel.findOne({_id: id});
+        }
+        else{
+            userData = await userModel.findOne({_id: id});
+        }
+
+        if(userData){
+            res.status(200).json(userData);
+        }
+        else{
+            res.status(205).json({
+                message: "error"
+            });
+        }
+    }
+    catch(error){
+        res.status(500).json(error);
+    }
+});
+
 router.put("/password/change", async(req, res) => {
     const id = jwt.decode(req.cookies.logged,"cugelaiUzcldiufgaewiufgsldjc");
     const type = req.cookies.type;
